@@ -20,9 +20,13 @@ export default () => {
                     </View>
                 </View>
             </TouchableWithoutFeedback>
-            
-            <View style={styles.list}>
 
+            <View style={styles.list}>
+                <View style={[styles.searchContainer, {opacity: 1}]}>
+                    <View style={styles.searchBar}>
+
+                    </View>
+                </View>
             </View>
         </View>
     )
@@ -32,15 +36,15 @@ export default () => {
 const styles = StyleSheet.create ({
     dropdownContainer: {
         height: "auto",
-        alighnSelf: "stretch", 
+        alignSelf: "stretch", 
     },
     button:{
         height: 50,
-        alighnSelf: "stretch",
-        backgroundcolor: "#fcfcf7",
+        alignSelf: "stretch",
+        backgroundColor: "#fcfcf7",
         justifyContent: "center",
-        alighnItems: "flex-start",
-        borderwidth: 1.8,
+        alignItems: "flex-start",
+        borderWidth: 1.8,
         borderColor: "#2f7ebf",
         borderRadius: 4,
         zIndex: 10
@@ -49,7 +53,7 @@ const styles = StyleSheet.create ({
         height: 30,
         width:30,
         justifyContent: "center",
-        alighnItems: "center",
+        alignItems: "center",
         position: "absolute",
         left: 5,
         zIndex: 10
@@ -58,7 +62,7 @@ const styles = StyleSheet.create ({
     titleBox: {
         position: "absolute",
         left: 37,
-        backgroundcolor: "#fdf8eb",
+        backgroundColor: "#fdf8eb",
         paddingHorizontal: 4,
         zIndex: 0,
         borderRadius: 8
@@ -67,7 +71,7 @@ const styles = StyleSheet.create ({
         height: 50,
         width: 40,
         justifyContent: "center",
-        alighnItems: "center",
+        alignItems: "center",
         position: "absolute",
         right: 0,
         zIndex: 10
@@ -75,7 +79,7 @@ const styles = StyleSheet.create ({
     circle: {
         height: 35,
         width: 35,
-        backgroundcolor: "rgba(64, 122, 195, 0. 08",
+        backgroundColor: "rgba(64, 122, 195, 0. 08",
         borderRadius: 50,
         position: "absolute",
         zIndex: 0
@@ -92,5 +96,14 @@ const styles = StyleSheet.create ({
         paddingLeft: 8,
         paddingTop: 8,
         zIndex: 0
+    },
+    searchContainer: {
+        flex: 1
+    },
+    searchBar: {
+        height: 43,
+        alignSelf: "stretch",
+        flexDirection: "row",
+        backgroundColor: "#f9f9f9"
     }
 })
