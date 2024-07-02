@@ -1,5 +1,5 @@
 
-export default [
+export const signos = [
     {
         "Signo":"Aries",
         "Elemento":"Fuego",
